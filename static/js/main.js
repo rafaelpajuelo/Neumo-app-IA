@@ -34,6 +34,7 @@ $(document).ready(function () {
 
         // Make prediction by calling api /predict
         $.ajax({
+            
             type: 'POST',
             url: '/predict',
             data: form_data,
@@ -43,9 +44,11 @@ $(document).ready(function () {
             async: true,
             success: function (data) {
                 // Get and display the result
+                let resultado= data.split(',');
                 $('.loader').hide();
                 $('#result').fadeIn(600);
-                $('#result').text(' Resultado:  ' + data);
+                $('#result').text(`Resultado: ${resultado[0]}`);
+                $('#Porcentaje').text(`Porcentaje: ${resultado[1]}`);
                 console.log('Success!');
             },
         });

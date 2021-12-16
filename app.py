@@ -62,10 +62,12 @@ def upload():
         # Predicción
         preds = model_predict(file_path, model)
         print(preds)
-        print('PREDICCIÓN', names[np.argmax(preds)])
+        maximo=np.argmax(preds)
+        print('PREDICCIÓN', names[maximo])
         
         # Enviamos el resultado de la predicción
-        result = str(names[np.argmax(preds)])              
+        result = str(names[np.argmax(preds)])+','+str((round(np.amax(preds)*100,1)))+'%'    
+        print(result)      
         return result
     return None
 

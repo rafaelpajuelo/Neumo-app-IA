@@ -1,6 +1,6 @@
 .img-preview {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 320px;
     position: relative;
     border: 10px solid #F8F8F8;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
@@ -22,17 +22,17 @@ input[type="file"] {
 
 .upload-label{
     display: inline-block;
-    padding: 15px 15px;
-    background: #E6BA89;
-    color: #fff;
-    font-size: 1em;
+    padding-left: 180px;
+    background: #ffffff;
+    color: rgb(102, 100, 100);
+    font-size: 5em;
     transition: all .4s;
     cursor: pointer;
 }
 
 .upload-label:hover{
-    background: #E6BA89;
-    color: #E6BA89;
+    background: #ffffff;
+    color: #000000;
 }
 
 .loader {
